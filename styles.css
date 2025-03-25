@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --color1: #9b1c31;
+    --color2: #f1c40f;
+    --color3: #bdc3c7;
+}
+
+body {
+    background-color: var(--color1);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.left {
+    margin-left: 60px;
+}
+
+.left h1 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 900;
+    font-size: 4rem;
+}
+
+.left p {
+    color: var(--color2);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    width: 700px;
+}
+
+button {
+    padding: 10px 30px;
+    background-color: #cea709;
+    color: #000000;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.5s;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #edd206;
+    transform: translateY(-5px);
+}
+
+.right {
+    margin-right: 30px;
+}
+
+.right img {
+    width: 600px;
+    animation: flutuar 4s infinite ease-in-out;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Garantir que o scroll horizontal seja evitado */
+        justify-content: center; /* Alinha o conteúdo no centro */
+        align-items: center; /* Alinha o conteúdo no centro */
+        height: 100%; /* Ajusta a altura para caber na tela */
+    }
+
+    .container {
+        flex-direction: column; /* Coloca o conteúdo em coluna */
+        height: auto; /* Ajusta a altura de acordo com o conteúdo */
+        justify-content: center; /* Alinha o conteúdo no centro */
+        align-items: center; /* Alinha o conteúdo no centro */
+        padding: 20px; /* Adiciona um padding para garantir que o conteúdo não toque nas bordas */
+    }
+
+    .left {
+        text-align: start;
+        margin-left: 0;
+        margin-bottom: 20px;
+        max-width: 90%;
+    }
+
+    .left h1 {
+        font-size: 2.5rem;
+        margin-top: 30px;
+        margin-right: 40px;
+    }
+
+    .left p {
+        font-size: 1rem;
+        width: 90%;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+
+    .right img {
+        width: 100%;
+        max-width: 400px;
+        margin-top: 20px;
+    }
+}
